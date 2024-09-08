@@ -254,14 +254,3 @@ comparar::Integer->Integer->Integer
 comparar a b    | sumaUltimosDosDigitos a < sumaUltimosDosDigitos b = 1
                 | sumaUltimosDosDigitos a > sumaUltimosDosDigitos b = -1
                 | otherwise=0
-
---Ejercicio 9
-
-{- a) f1 :: Float-> Float f1 n  | n == 0 = 1 
-                                | otherwise = 0
-f1:R->R/f(0)=1 ^ f(n)=0 con n≠0
-
-b)f2 :: Float-> Float 
-  f2 n  | n == 1 = 15 
-        | n ==-1 =-15
--}
