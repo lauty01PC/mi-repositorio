@@ -127,3 +127,14 @@ proximoPerfecto n   | esPerfecto (n+1) = n+1
 
 esPerfecto::Int->Bool
 esPerfecto n =sumatoria (divisoresPropios n) == n
+
+--Ejercicio 12
+listaDeAmigos::[Int]->[(Int,Int)]
+listaDeAmigos [x] = []
+listaDeAmigos (x:xs) = buscarAmigos x xs ++ listaDeAmigos xs
+
+buscarAmigos::Int->[Int]->[(Int,Int)]
+buscarAmigos a [] = []
+buscarAmigos a (x:xs)   | a==x = buscarAmigos a xs
+                        | sonAmigos a x = (a,x): buscarAmigos a xs
+                        | otherwise = buscarAmigos a xs
